@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #F4EEFF;
+                color: #424874;
+                padding: 30px;
+            }
+            h1 {
+                padding: 10px;
+            }
+            button {
+                border-radius: 5px;
+                background-color: #A6B1E1;
+                padding: 15px;
+                margin: 20px;
+                border: none;
+                box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+                color: white;
+                font-weight: bold;
+            }
+            img {
+                border-radius: 10px;
+                box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+            }
+            input {
+                padding: 20px;
+                border-radius: 10px;
+                width: 90%;
+            }
+        </style>
+    </head>
+    <body onload="window.alert('Page successfully loaded, i am window event')">
+        <h1 id="h">JAVASCRIPT WORLD</h1>
+        <BUTTON ID="B" ONCLICK="change()">Change Heading</BUTTON> 
+        <br>
+        <IMG ID="i" src="anits.jpeg">
+         <br>  
+        <BUTTON onclick="document.getElementById('i').src ='anits1.jpeg'">Image 1</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits2.jpeg'">Image 2</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits3.jpeg'">Image 3</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits4.jpeg'">Image 4</BUTTON>
+        <BUTTON onclick="document.getElementById('i').src = 'anits5.jpeg'">Image 5</BUTTON>
+        <!--
+            <BUTTON id="vir1" onclick="f1()">Image 4</BUTTON>
+        <BUTTON id="vir2" onclick="f2()">Image 5</BUTTON>
+
+        -->
+        
+        <br>
+
+            <img id="j" src="anits1.jpeg" onclick="imgchn()">
+
+            <br>
+    
+        
+        <div> 
+        
+        </div>
+        <h2>mousehover event</h2>
+        <p id="para" > This shows the mouse hover event. When the is hovered on this paragraph the color will be changed to another, again after removing the mouse from the paragraph the previous color of the paragraph will be back</p>
+            
+        <BUTTON ID="B2" ONCLICK="changecolor()">CHANGE COLOR</BUTTON> 
+        <h2> Enter something here for key event</h2>
+        <input type="text" id="input1" onkeydown="keydownevent()" placeholder="Type your text here.."/>
+        <SCRIPT>
+            function change(){
+                document.getElementById('h').innerHTML='JavaScript After OnClick';
+            }
+            function changecolor(){
+            let t= document.getElementById('para')
+            t.style.color='orange'}
+            function f1(){
+                document.getElementById('vir1').src="anits4.jpeg";
+            }
+            function f2(){
+                document.getElementById('vir2').src="anits5.jpeg";
+            }
+            function imgchn() {
+                document.getElementById('j').src="anits5.jpeg";
+            }
+
+
+            let t1= document.getElementById('para')
+            t1.addEventListener('mouseover',function()
+            {
+               t1.style.color='red' ;
+            });
+            t1.addEventListener('mouseout',function()
+            {
+               t1.style.color='black' ;
+            }
+            );
+            function keydownevent()
+	    {
+		    document.getElementById("input1");
+		    alert("Pressed a key");
+	    }
+            </SCRIPT>
+    
+    
+    </body>
+</html>
